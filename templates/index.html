@@ -1,337 +1,42 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, maximum-scale=1">
-
-<title>Homepage</title>
-<link rel="icon" href="../favicon.png" type="image/png">
-<link rel="shortcut icon" href="../favicon.ico" type="img/x-icon">
-
-
-<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="../static/css/style.css" rel="stylesheet" type="text/css">
-<link href="../static/css/font-awesome.css" rel="stylesheet" type="text/css">
-<link href="../static/css/responsive.css" rel="stylesheet" type="text/css">
-<link href="../static/css/animate.css" rel="stylesheet" type="text/css">
-
-<!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
-
-<script type="text/javascript" src="../static/js/jquery.1.8.3.min.js"></script>
-<script type="text/javascript" src="../static/js/bootstrap.js"></script>
-<script type="text/javascript" src="../static/js/jquery-scrolltofixed.js"></script>
-<script type="text/javascript" src="../static/js/jquery.easing.1.3.js"></script>
-<script type="text/javascript" src="../static/js/jquery.isotope.js"></script>
-<script type="text/javascript" src="../static/js/wow.js"></script>
-<script type="text/javascript" src="../static/js/classie.js"></script>
-
-
-<!--[if lt IE 9]>
-    <script src="../static/js/respond-1.1.0.min.js"></script>
-    <script src="../static/js/html5shiv.js"></script>
-    <script src="../static/js/html5element.js"></script>
-<![endif]-->
-
-
-</head>
-<body>
-
-<!--header-start-->
-<!--
-<header class="header" id="header">
-	<div class="container">
-    	<figure class="logo animated fadeInDown delay-07s">
-        	<a href="#"><img src="img/logo.png" alt=""></a>	
-        </figure>	
-        <h1 class="animated fadeInDown delay-07s">Welcome To Knight Studios</h1>
-        <ul class="we-create animated fadeInUp delay-1s">
-        	<li>We are a digital agency that loves crafting beautiful websites.</li>
-        </ul>
-            <a class="link animated fadeInUp delay-1s" href="#">Get Started</a>
-    </div>
-</div>
-</header>-->
-<!--header-end-->
-
-
-<nav class="main-nav-outer" id="test"><!--main-nav-start-->
-	<div class="container">
-        <ul class="main-nav">
-        	<li><a href="#header">Home</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#Portfolio">Portfolio</a></li>
-            <li class="small-logo"><i class="fa-tree"></i>
-            <!--<a href="#header"><img src="img/small-logo.png" alt=""></a>--></li>
-            <li><a href="#client">Clients</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
-    </div>
-</nav><!--main-nav-end-->
-
-
-
+{% extends "base.html" %}
+{% block content %}
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
-    	<!--<h2>Services</h2>
-    	<h6>We offer exceptional service with complimentary hugs.</h6>-->
-        <div class="row">
-        	<div class="col-lg-3 col-sm-6 wow fadeInLeft delay-05s">
-            	<div class="service-list">
-                	<div class="service-list-col1">
-                    	<i class="fa-paw"></i>
-                    </div>
-                	<div class="service-list-col2">
-                        <h3>Pages</h3>
-                        <p>
-                            <a href="#">Proin</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                        </p>
-                    </div>
-                </div>
-                <div class="service-list">
-                	<div class="service-list-col1">
-                    	<i class="fa-pagelines"></i>
-                    </div>
-                	<div class="service-list-col2">
-                        <h3>Categories</h3>
-                        <p>
-                            <a href="#">Proin</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                        </p>
-                    </div>
-                </div>
-                <div class="service-list">
-                	<div class="service-list-col1">
-                    	<i class="fa-tags"></i>
-                    </div>
-                	<div class="service-list-col2">
-                        <h3>Tags</h3>
-                        <p>
-                            <a href="#">Proin</a>
-                            <a href="#">consequat</a> 
-                            <a href="#">Donec</a>
-                            <a href="#">consequat</a> 
-                            <a href="#">Donec</a>
-                            <a href="#">consequat</a> 
-                            <a href="#">Donec</a>
-                            <a href="#">consequat</a> 
-                            <a href="#">Donec</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="service-list">
-                	<div class="service-list-col1">
-                    	<i class="fa-link"></i>
-                    </div>
-                	<div class="service-list-col2">
-                        <h3>Links</h3>
-                        <p>
-                            <a href="#">Proin</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                            <a href="#">consequat</a> <br/>
-                            <a href="#">Donec</a><br/>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
-            	                           
-                <article class="post">
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="article.html" rel="bookmark">Hello world!你好</a></h1>
-                        <div class="entry-meta"> 
-                            <span class="posted-on"><time class="entry-date published" date="2013-09-27">September 27, 2013</time></span>           
-                        </div>
-                    </header>
-                    <div class="entry-content">
-                        <p>java.security.MessageDigest 类用于为应用程序提供信息摘要算法的功能，如 MD5 或 SHA 算法。简单点说就是用于生成散列码。信息摘要是安全的单向哈希函数，它接收任意大小的数据，输出固定长度的哈希值。
+		<div class="row">
+			
+			{% include 'sidebar.html' %}
 
-MessageDigest 通过其 getInstance 系列静态函数来进行实例化和初始化。MessageDigest 对象通过使用 update 方法处理数据。任何时候都可以调用 reset 方法重置摘要。一旦所有需要更新的数据都已经被更新了，应该调用 digest 方法之一完成哈希计算并返回结果。
-
-对于给定数量的更新数据，digest 方法只能被调用一次。digest 方法被调用后，MessageDigest 对象被重新设置成其初始状态。
-                         <a href="single.html" class="more-link">Read more&#8230;</a></p>
-                    </div>
-
-                </article>
-                <article class="post">
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="single.html" rel="bookmark">Hello world!</a></h1>
-                        <div class="entry-meta"> 
-                            <span class="posted-on"><time class="entry-date published" date="2013-09-27">September 27, 2013</time></span>           
-                        </div>
-                    </header>
-                    <div class="entry-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Eius, molestias, architecto, adipisci, numquam dolor iusto 
-                        eos reprehenderit placeat quam debitis quas magni eveniet. 
-                        Saepe, nam, iste consectetur quae necessitatibus dolores 
-                        provident veritatis possimus rerum facilis quia dicta itaque 
-                        sapiente iusto natus quidem magni quibusdam. Explicabo nesciunt
-                         vel rem obcaecati reprehenderit eveniet culpa repudiandae. 
-                         Distinctio, quia, provident illum necessitatibus repellendus 
-                         rem voluptates exercitationem numquam inventore itaque atque 
-                         sint nihil eveniet consequuntur eius! Laborum, at sit animi 
-                         quae quidem ex tempora facilis. 
-                         <a href="single.html" class="more-link">Continue reading&#8230;</a></p>
-                    </div>
-                </article>
-                <article class="post">
-                    <header class="entry-header">
-                        <h1 class="entry-title"><a href="single.html" rel="bookmark">Hello world!</a></h1>
-                        <div class="entry-meta"> 
-                            <span class="posted-on"><time class="entry-date published" date="2013-09-27">September 27, 2013</time></span>           
-                        </div>
-                    </header>
-                    <div class="entry-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Eius, molestias, architecto, adipisci, numquam dolor iusto 
-                        eos reprehenderit placeat quam debitis quas magni eveniet. 
-                        Saepe, nam, iste consectetur quae necessitatibus dolores 
-                        provident veritatis possimus rerum facilis quia dicta itaque 
-                        sapiente iusto natus quidem magni quibusdam. Explicabo nesciunt
-                         vel rem obcaecati reprehenderit eveniet culpa repudiandae. 
-                         Distinctio, quia, provident illum necessitatibus repellendus 
-                         rem voluptates exercitationem numquam inventore itaque atque 
-                         sint nihil eveniet consequuntur eius! Laborum, at sit animi 
-                         quae quidem ex tempora facilis. 
-                         <a href="single.html" class="more-link">Continue reading&#8230;</a></p>
-                    </div>
-                </article>
-                <nav>
-                  <ul class="pager">
-                    <li><a href="#" style="color: #666666;">Previous</a></li>
-                    <li><a href="#" style="color: #666666;">Next</a></li>
-                  </ul>
-                </nav>
-            </figure>
-        
-        </div>
+			<figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
+				{% for article in articles_page.object_list %}
+				<article class="post">
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h2>
+						<div class="entry-meta"> 
+							<span class="posted-on">
+								<time class="entry-date published" title="{{ article.date.isoformat() }}"> 
+									{{ article.locale_date }} 
+								</time>
+							</span>
+							{% if article.author %}
+							<span class="posted-by">By 
+								<a href="{{ SITEURL }}/{{ article.author.url }}">
+									{{ article.author }}
+								</a>
+							</span>
+							{% endif %}           
+						</div>
+					</header>
+					<div class="entry-content">
+						 {{ article.summary }} 
+						 <a class="more-link" href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">Read more&#8230;</a>
+					</div>
+				</article>
+				{% endfor %}
+				
+				{% include 'pagination.html' %}
+				
+			</figure>  
+		</div>
 	</div>
 </section><!--main-section-end-->
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="footer-logo"><i class="fa-tree"></i></div>
-        <span class="copyright">Copyright © 2014 Knight Theme By <a href="#">W3Goods</a>.</span>
-    </div>
-</footer>
-
-
-<script type="text/javascript">
-    $(document).ready(function(e) {
-        $('#test').scrollToFixed();
-        $('.res-nav_click').click(function(){
-            $('.main-nav').slideToggle();
-            return false    
-            
-        });
-        
-    });
-</script>
-
-  <script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       100
-      }
-    );
-    wow.init();
-    document.getElementById('').onclick = function() {
-      var section = document.createElement('section');
-      section.className = 'wow fadeInDown';
-      this.parentNode.insertBefore(section, this);
-    };
-  </script>
-
-
-<script type="text/javascript">
-	$(window).load(function(){
-		
-		$('.main-nav li a').bind('click',function(event){
-			var $anchor = $(this);
-			
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top - 102
-			}, 1500,'easeInOutExpo');
-			/*
-			if you don't want to use the easing effects:
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 1000);
-			*/
-			event.preventDefault();
-		});
-	})
-</script>
-
-<script type="text/javascript">
-
-$(window).load(function(){
-  
-  
-  var $container = $('.portfolioContainer'),
-      $body = $('body'),
-      colW = 375,
-      columns = null;
-
-  
-  $container.isotope({
-    // disable window resizing
-    resizable: true,
-    masonry: {
-      columnWidth: colW
-    }
-  });
-  
-  $(window).smartresize(function(){
-    // check if columns has changed
-    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
-    if ( currentColumns !== columns ) {
-      // set new column count
-      columns = currentColumns;
-      // apply width to container manually, then trigger relayout
-      $container.width( columns * colW )
-        .isotope('reLayout');
-    }
-    
-  }).smartresize(); // trigger resize to set container width
-  $('.portfolioFilter a').click(function(){
-        $('.portfolioFilter .current').removeClass('current');
-        $(this).addClass('current');
- 
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-			
-            filter: selector,
-         });
-         return false;
-    });
-  
-});
-
-</script>
-</body>
-</html>
+{% endblock %}
