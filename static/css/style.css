@@ -82,8 +82,12 @@ h6{
 	margin:0 0 60px 0;
 }
 p{
-	line-height:24px;
-	margin:0;
+	font-weight: 400;
+    font-size: 1rem;
+    font-size: 14px;
+    margin-bottom: 13px;
+    line-height: 1.625em;
+	margin-bottom: 13px;
 }
 
 /* Header Styles
@@ -211,7 +215,7 @@ color: #fff;
 }
 
 .small-logo{ 
-	padding:0 32px;
+	padding:0 32px 10px;
 }
 
 .main-section{
@@ -339,7 +343,7 @@ color: #fff;
 	margin:0 5px 60px 5px;
 }
 .service-list-col2 p a{
-	font-size:12px;
+	font-size:13px;
 	color:#888888;
 	font-family: 'Microsoft YaHei';
 	font-weight:400;

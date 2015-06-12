@@ -8,12 +8,14 @@
 <meta name="description" content="">
 <meta name="author" content="{{ AUTHOR }}">
 
+<link rel="shortcut icon" href="{{ SITEURL }}/images/favicon.ico">
+
+<link href="{{ SITEURL }}/theme/css/monokai_sublime.css" rel="stylesheet" type="text/css">
 <link href="{{ SITEURL }}/theme/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="{{ SITEURL }}/theme/css/style.css" rel="stylesheet" type="text/css">
 <link href="{{ SITEURL }}/theme/css/font-awesome.css" rel="stylesheet" type="text/css">
 <link href="{{ SITEURL }}/theme/css/responsive.css" rel="stylesheet" type="text/css">
 <link href="{{ SITEURL }}/theme/css/animate.css" rel="stylesheet" type="text/css">
-<link href="{{ SITEURL }}/theme/css/monokai_sublime.css" rel="stylesheet" type="text/css">
 
 <!--[if IE]><style type="text/css">.pie {behavior:url(PIE.htc);}</style><![endif]-->
 
@@ -25,6 +27,13 @@
 <script type="text/javascript" src="{{ SITEURL }}/theme/js/wow.js"></script>
 <script type="text/javascript" src="{{ SITEURL }}/theme/js/classie.js"></script>
 <script type="text/javascript" src="{{ SITEURL }}/theme/js/highlight.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('pre').each(function(i, block) {
+		hljs.highlightBlock(block);
+	});
+});
+</script>
 
 <!--[if lt IE 9]>
 	<script src="{{ SITEURL }}/js/respond-1.1.0.min.js"></script>
@@ -65,10 +74,6 @@
 		<ul class="main-nav">
 			<li><a href="{{ SITEURL }}/">Home</a></li>
 
-			{% for title, link in MENUITEMS %}
-				<li><a href="{{ link }}">{{ title }}</a></li>
-			{% endfor %}
-
 			{% if DISPLAY_PAGES_ON_MENU %}
 				{% for p in PAGES %}
 					<li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
@@ -80,8 +85,13 @@
 					{% endfor %}
 				{% endif %}
 			{% endif %}
-			<!--
-			<li class="small-logo"><i class="fa-tree"></i>-->
+
+			<li class="small-logo"><i class="fa-tree"></i>
+
+			{% for title, link in MENUITEMS %}
+				<li><a href="{{ link }}">{{ title }}</a></li>
+			{% endfor %}
+			
 			
 		</ul>
 		<a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
@@ -97,26 +107,15 @@
 		<div class="footer-logo"><i class="fa-tree"></i></div>
 		<span class="copyright">Copyright © 2015 By <a href="{{ SITEURL }}">Ellery</a>.</span>
 	</div>
-</footer>
-
-<script>
-hljs.initHighlightingOnLoad();
-$(document).ready(function() {
-	$('pre').each(function(i, block) {
-		hljs.highlightBlock(block);
-	});
-});
-</script>  
+</footer> 
 
 <script type="text/javascript">
 	$(document).ready(function(e) {
 		$('#test').scrollToFixed();
 		$('.res-nav_click').click(function(){
 			$('.main-nav').slideToggle();
-			return false    
-			
+			return false 
 		});
-		
 	});
 </script>
 
@@ -126,13 +125,12 @@ $(document).ready(function() {
 		offset: 100
 	});
 	wow.init();
-	document.getElementById('').onclick = function() {
-		var section = document.createElement('section');
-		section.className = 'wow fadeInDown';
-		this.parentNode.insertBefore(section, this);
-	};
+	// document.getElementById('').onclick = function() {
+	// 	var section = document.createElement('section');
+	// 	section.className = 'wow fadeInDown';
+	// 	this.parentNode.insertBefore(section, this);
+	// };
 </script>
 
-</script>
 </body>
 </html>

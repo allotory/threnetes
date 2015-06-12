@@ -6,9 +6,7 @@
 		<div class="service-list-col2">
 			<h3>Pages</h3>
 			<p>
-				{% for title, link in MENUITEMS %}
-					<a href="{{ link }}">{{ title }}</a><br/>
-				{% endfor %}
+				<a href="{{ SITEURL }}/">Home</a><br/>
 				{% if DISPLAY_PAGES_ON_MENU %}
 					{% for p in PAGES %}
 						<a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a><br/>
@@ -20,6 +18,10 @@
 						{% endfor %}
 					{% endif %}
 				{% endif %}
+
+				{% for title, link in MENUITEMS %}
+					<a href="{{ link }}">{{ title }}</a><br/>
+				{% endfor %}
 			</p>
 		</div>
 	</div>
@@ -56,13 +58,29 @@
 		</div>
 	</div>
 	
-	{% if SOCIAL %}
+	{% if LINKS %}
 	<div class="service-list">
 		<div class="service-list-col1">
 			<i class="fa-link"></i>
 		</div>
 		<div class="service-list-col2">
 			<h3>Links</h3>
+			<p>
+				{% for name, link in LINKS %}
+					<a href="{{ link }}">{{ name }}</a><br/>
+				{% endfor %}
+			</p>
+		</div>
+	</div>
+	{% endif %}
+	
+	{% if SOCIAL %}
+	<div class="service-list">
+		<div class="service-list-col1">
+			<i class="fa-facebook-square"></i>
+		</div>
+		<div class="service-list-col2">
+			<h3>Social</h3>
 			<p>
 				{% for name, url in SOCIAL %}
 					<a href="{{ url|e }}">{{ name }}</a><br/>
