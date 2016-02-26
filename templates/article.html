@@ -10,8 +10,9 @@
 			<figure class="col-lg-9 col-sm-6  text-left wow fadeInUp delay-02s">
 				<div class="post">                        
 					<a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
-						title="Permalink to {{ article.title|striptags }}">
-						<h2>{{ article.title }}</h2>
+						title="Permalink to {{ article.title|striptags }}"
+						style="color:black; text-align:center">
+						<h1>{{ article.title }}</h1>
 					</a>
 					{% import 'translations.html' as translations with context %}
 					{{ translations.translations_for(article) }}
